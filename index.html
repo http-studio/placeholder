@@ -163,41 +163,64 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 
+        background-color: #E5E5E5;
         color: #000000;
-        /* background-color: red; */
-        /* animation: 2.1s pulse infinite; */
       }
 
       @keyframes pulse {
         0% {
           filter: hue-rotate(0deg);
         }
-
         12.5% {
+          filter: hue-rotate(0deg);
+        }
+
+        13% {
+          filter: hue-rotate(45deg);
+        }
+        25% {
           filter: hue-rotate(45deg);
         }
 
-        25% {
+        25.5% {
+          filter: hue-rotate(90deg);
+        }
+        37.5% {
           filter: hue-rotate(90deg);
         }
 
-        37.5% {
+        38% {
+          filter: hue-rotate(135deg);
+        }
+        50% {
           filter: hue-rotate(135deg);
         }
 
-        50% {
+        50.5% {
+          filter: hue-rotate(180deg);
+        }
+        62.5% {
           filter: hue-rotate(180deg);
         }
 
-        62.5% {
+        63% {
+          filter: hue-rotate(225deg);
+        }
+        75% {
           filter: hue-rotate(225deg);
         }
 
-        75% {
+        75.5% {
+          filter: hue-rotate(270deg);
+        }
+        87.5% {
           filter: hue-rotate(270deg);
         }
 
-        87.5% {
+        88% {
+          filter: hue-rotate(315deg);
+        }
+        99.5% {
           filter: hue-rotate(315deg);
         }
 
@@ -217,6 +240,9 @@
         margin-bottom: 20px;
         max-width: 150px;
         height: auto;
+      }
+
+      img.animate {
         /* GIF time: 2.1s */
         /* animation time: 8 iterations x 2.1s =  */
         animation: 16.8s pulse infinite;
@@ -270,12 +296,17 @@
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       });
+
+      function startAnimation() {
+        const img = document.querySelector('img');
+        img.classList.add('animate');
+      }
     </script>
   </head>
 
   <body>
     <div class="wrapper">
-      <img src="monster.gif" alt="monster">
+      <img src="monster.gif" alt="monster" onload="startAnimation()">
       <h1>Http Studio</h1>
       <p>Design and engineering for glowing rectangles. Coming soon.</p>
     </div>
