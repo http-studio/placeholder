@@ -165,20 +165,32 @@
 
         color: #000000;
         /* background-color: red; */
-        animation: 6s pulse infinite;
+        animation: 2.1s pulse infinite;
       }
 
       @keyframes pulse {
         0% {
-          background-color: #C62626;
-        }
-
-        50% {
           background-color: #E5E5E5;
         }
 
-        100% {
+        25% {
+          background-color: #E5E5E5;
+          filter: invert(0);
+        }
+
+        70% {
           background-color: #C62626;
+          filter: invert(1);
+        }
+
+        95% {
+          background-color: #C62626;
+          filter: invert(1);
+        }
+
+        100% {
+          background-color: #E5E5E5;
+          filter: invert(0);
         }
       }
 
