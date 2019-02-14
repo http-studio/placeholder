@@ -173,25 +173,42 @@
       }
 
       img {
-        margin-bottom: 25px;
-        max-width: 250px;
+        margin-bottom: 20px;
+        max-width: 150px;
         height: auto;
       }
 
       h1 {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         font-weight: 600;
-        font-size: 36px;
+        font-size: 24px;
         text-align: center;
       }
 
       p {
-        max-width: 400px;
+        max-width: 250px;
         font-weight: 400;
         text-align: center;
         line-height: 1.4;
-        font-size: 18px;
+        font-size: 12px;
         letter-spacing: 0.02em;
+      }
+
+      @media (min-width: 768px) {
+        img {
+          max-width: 250px;
+          margin-bottom: 25px;
+        }
+
+        h1 {
+          font-size: 36px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          max-width: 400px;
+          font-size: 18px;
+        }
       }
     </style>
 
